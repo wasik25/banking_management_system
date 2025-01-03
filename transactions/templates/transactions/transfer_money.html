@@ -1,0 +1,10 @@
+<form method="post" action="{% url 'transfer_money' %}">
+    {% csrf_token %}
+    <label for="receiver_account_no">Receiver Account Number:</label>
+    <input type="number" name="receiver_account_no" id="receiver_account_no" required>
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" step="0.01" name="amount" id="amount" required>
+    <br>
+    <button type="submit">Transfer Money</button>
+</form>
