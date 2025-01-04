@@ -22,6 +22,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(dotenv_path=os.path.join(BASE_DIR, '.env'))
+PORT = os.getenv("PORT", "8000")
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,8 +34,9 @@ SECRET_KEY = os.environ.get('SKEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+DEFAULT_PORT = PORT
 
 # Application definition
 
